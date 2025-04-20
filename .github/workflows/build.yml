@@ -41,7 +41,7 @@ jobs:
       - name: Create .env file for python-dotenv
         run: |
           echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
-          echo "FLASK_SECRET=${{ secrets.FLASK_SECRET }}" >> .env
+          echo "MAP_ID=${{ secrets.MAP_ID }}" >> .env
           # Add more secrets if needed
 
       - name: Build Docker image
