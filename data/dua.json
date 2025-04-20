@@ -1,0 +1,168 @@
+{
+  "duas": [
+    {
+      "category": "Morning and Evening",
+      "duas": [
+        {
+          "title": "Ayat al-Kursi",
+          "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+          "translation": "Allah – there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
+          "reference": "Qur’an 2:255; Hadith - Tabarani"
+        },
+        {
+          "title": "Sayyid al-Istighfar",
+          "arabic": "اللَّهُمَّ أَنْتَ رَبِّي، لَا إِلٰهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.",
+          "translation": "O Allah, You are my Lord, there is no deity except You. You created me and I am Your servant. I abide by Your covenant and promise as best I can. I seek refuge in You from the evil I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for verily none forgives sins except You.",
+          "reference": "Bukhari"
+        },
+        {
+          "title": "Morning Gratitude",
+          "arabic": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ، لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ.",
+          "translation": "O Allah, whatever blessing I or any of Your creation has risen upon this morning, it is from You alone, without partner. So for You is all praise and all thanks.",
+          "reference": "Abu Dawud"
+        },
+        {
+          "title": "Evening Gratitude",
+          "arabic": "اللَّهُمَّ مَا أَمْسَىٰ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ، لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ.",
+          "translation": "O Allah, whatever blessing I or any of Your creation has received this evening, it is from You alone, without partner. So for You is all praise and all thanks.",
+          "reference": "Abu Dawud"
+        },
+        {
+          "title": "Pleased with Allah",
+          "arabic": "رَضِيتُ بِاللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ ﷺ نَبِيًّا.",
+          "translation": "I am pleased with Allah as my Lord, with Islam as my religion, and with Muhammad ﷺ as my Prophet.",
+          "reference": "Tirmidhi"
+        },
+        {
+          "title": "Bismillah Protection",
+          "arabic": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.",
+          "translation": "In the name of Allah with whose name nothing in the heavens or earth can harm. He is the All-Hearing, All-Knowing.",
+          "reference": "Tirmidhi"
+        }
+      ]
+    },
+    {
+      "category": "Daily Essentials",
+      "duas": [
+        {
+          "title": "Before Removing Clothes",
+          "arabic": "بِسْمِ اللَّهِ",
+          "translation": "In the Name of Allah.",
+          "reference": "Tabarani"
+        },
+        {
+          "title": "After Wearing Clothes",
+          "arabic": "الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
+          "translation": "All praise is to Allah Who has clothed me with this garment and provided it for me, without any power or might on my part.",
+          "reference": "Abu Dawud"
+        },
+        {
+          "title": "Before Entering the Lavatory",
+          "arabic": "بِسْمِ اللَّهِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+          "translation": "In the Name of Allah. O Allah, I seek Your protection from the male and female devils.",
+          "reference": "Bukhari and Tirmidhi"
+        },
+        {
+          "title": "After Coming Out of the Lavatory",
+          "arabic": "غُفْرَانَكَ",
+          "translation": "I seek Your forgiveness.",
+          "reference": "Abu Dawud"
+        },
+        {
+          "title": "After Wudhu",
+          "arabic": "أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ. اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ",
+          "translation": "I bear witness that there is no god but Allah. He is Alone and He has no partner whatsoever. And I bear witness that Muhammad is His slave and His Messenger. O Allah, make me among the repentant and among those who purify themselves.",
+          "reference": "Tirmidhi"
+        },
+        {
+          "title": "After Wudhu (Additional Dhikr)",
+          "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+          "translation": "You are free from imperfection, O Allah, and all praise is to You. I bear witness that there is no god but You. I seek Your forgiveness and turn to You in repentance.",
+          "reference": "Nasa’i"
+        },
+        {
+          "title": "When Leaving the House",
+          "arabic": "بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+          "translation": "In the Name of Allah, I have placed my trust in Allah. There is no power (in averting evil) or strength (in attaining good) except through Allah.",
+          "reference": "Abu Dawud"
+        }
+      ]
+    },
+    {
+      "category": "Salah and Forgiveness",
+      "duas": [
+        {
+          "title": "Seeking Forgiveness After Prayer",
+          "arabic": "أَسْتَغْفِرُ اللَّهَ. اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
+          "translation": "I seek the forgiveness of Allah. O Allah, You are The Flawless and The Source of Peace, and from You comes peace. Blessed are You, full of Majesty and Honour.",
+          "reference": "Muslim"
+        },
+        {
+          "title": "No One Can Withhold or Give Except Allah",
+          "arabic": "لَا إِلٰهَ إِلَّا اللَّهُ، وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ، اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ",
+          "translation": "There is no god but Allah. He is Alone and He has no partner whatsoever. To Him Alone belong all sovereignty and all praise. He is over all things All-Powerful. O Allah, there is none who can withhold what You give, and none can give what You withhold; and the wealth of the wealthy does not avail them against You.",
+          "reference": "Bukhari"
+        },
+        {
+          "title": "Declaration of Tawheed and Sincerity",
+          "arabic": "لَا إِلٰهَ إِلَّا اللَّهُ، وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ، لَا إِلٰهَ إِلَّا اللَّهُ، وَلَا نَعْبُدُ إِلَّا إِيَّاهُ، لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ، وَلَهُ الثَّنَاءُ الْحَسَنُ، لَا إِلٰهَ إِلَّا اللَّهُ، مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الْكَافِرُونَ",
+          "translation": "There is no god but Allah. He is Alone and He has no partner whatsoever. To Him Alone belong all sovereignty and all praise. He is over all things All-Powerful. There is no power (in averting evil) or strength (in attaining good) except through Allah. There is no god but Allah, and we do not worship any other besides Him. To Him Alone belong grace, bounteousness and noble praise. There is no god but Allah. We sincerely devote our religion for Him, even though the disbelievers may dislike it.",
+          "reference": "Muslim"
+        },
+        {
+          "title": "Help in Worship",
+          "arabic": "اللَّهُمَّ أَعِنِّي عَلَىٰ ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
+          "translation": "O Allah, help me in remembering You, in being grateful to You, and in worshipping You in an excellent manner.",
+          "reference": "Abu Dawud"
+        },
+        {
+          "title": "Seeking Protection from Trials",
+          "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبُخْلِ، وَأَعُوذُ بِكَ مِنَ الْجُبْنِ، وَأَعُوذُ بِكَ أَنْ أُرَدَّ إِلَىٰ أَرْذَلِ الْعُمُرِ، وَأَعُوذُ بِكَ مِنْ فِتْنَةِ الدُّنْيَا، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ",
+          "translation": "O Allah, I seek Your protection from miserliness and I seek Your protection from cowardice. I seek Your protection from being sent back to a miserable old age. I seek Your protection from the trials of the world and I seek Your protection from the punishment of the grave.",
+          "reference": "Bukhari"
+        },
+        {
+          "title": "Tasbeeh, Tahmeed, Takbeer and Tawheed After Salah",
+          "arabic": "سُبْحَانَ اللَّهِ (33x)، الْحَمْدُ لِلَّهِ (33x)، اللَّهُ أَكْبَرُ (33x)، لَا إِلٰهَ إِلَّا اللَّهُ، وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+          "translation": "Allah is free from imperfection. All praise be to Allah. Allah is the Greatest. There is no god but Allah. He is Alone and He has no partner whatsoever. To Him Alone belong all sovereignty and all praise. He is over all things All-Powerful.",
+          "reference": "Muslim"
+        }
+      ]
+    },
+    {
+      "category": "Protection and Safety",
+      "duas": [
+        {
+          "title": "Protection from All Directions",
+          "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ، وَأَهْلِي وَمَالِي. اللَّهُمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي. اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي، وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي.",
+          "translation": "O Allah, I ask You for well-being in this world and the Hereafter. O Allah, I ask You for forgiveness and well-being in my religion and in my worldly affairs, and my family and my wealth. O Allah, conceal my faults and calm my fears. O Allah, protect me from in front of me, from behind me, from my right, from my left, and from above me, and I seek refuge in Your greatness from being struck from beneath me.",
+          "reference": "Sunan Ibn Majah 3871"
+        },
+        {
+          "title": "Seeking Refuge from the Devil",
+          "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الشَّيْطَانِ الرَّجِيمِ، وَهَمْزِهِ، وَنَفْخِهِ، وَنَفَثِهِ.",
+          "translation": "O Allah, I seek refuge in You from the accursed devil, from his madness, his pride, and his poetry (evil whisperings).",
+          "reference": "Sunan An-Nasa'i 5443"
+        },
+        {
+          "title": "Protection from Sickness",
+          "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبَرَصِ، وَالْجُنُونِ، وَالْجُذَامِ، وَمِنْ سَيِّئِ الْأَسْقَامِ.",
+          "translation": "O Allah, I seek refuge in You from leprosy, insanity, mutilation, and from all terrible diseases.",
+          "reference": "Sunan Abu Dawood 1554"
+        },
+        {
+          "title": "Dua for Family Protection",
+          "arabic": "اللَّهُمَّ احْفَظْ لِي أَهْلِي وَبَارِكْ لِي فِيهِمْ، وَاجْمَعْنَا عَلَى طَاعَتِكَ وَفِي ظِلِّ رِضَاكَ، وَاحْفَظْهُمْ مِنْ كُلِّ سُوءٍ وَمَكْرُوهٍ.",
+          "translation": "O Allah, protect my family for me, bless them for me, unite us in Your obedience and under Your pleasure, and protect them from every harm and evil.",
+          "reference": "Sunan Ibn Majah 3850"
+        },
+        {
+          "title": "Dua for Light and Peace of Mind",
+          "arabic": "اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا، وَعَنْ يَمِينِي نُورًا، وَعَنْ شِمَالِي نُورًا، وَفَوْقِي نُورًا، وَتَحْتِي نُورًا، وَأَمَامِي نُورًا، وَخَلْفِي نُورًا، وَاجْعَلْ لِي نُورًا.",
+          "translation": "O Allah, place light in my heart, light in my sight, light in my hearing, light on my right, light on my left, light above me, light beneath me, light in front of me, light behind me, and make light for me.",
+          "reference": "Sahih Muslim 763"
+        }
+      ]
+    }
+  ]
+}

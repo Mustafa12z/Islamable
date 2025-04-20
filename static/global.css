@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: Outfit;
+}
+
+:root {
+    --primary-color: #64c647;
+    --primary-hover-color: #4a9935;
+    --background-gradient: linear-gradient(180deg, #b0ec7e, #64c647); /* Light green gradient */
+    --background-gradient-dark: linear-gradient(180deg, #6fa14a, #3b6625); /* Darker green gradient */
+    --card-background: #ffffff;
+    --card-background-dark: #1f2937;
+    --text-color: #333;
+    --text-color-dark: #f4f4f4;
+    --heading-font: 'Nunito', sans-serif;
+    --body-font: 'Nunito', sans-serif;
+    --border-radius: 10px;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --max-container-width: 90%;
+    --max-container-height: 90%;
+  }

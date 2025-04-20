@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Islamable - Halal Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Maps Script -->
+  <script src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&libraries=marker&map_ids={{ map_id }}" async defer></script>
+
+  <!-- Page Scripts -->
+  <script src="{{ url_for('static', filename='map.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='home.js') }}" defer></script>
+</head>
+
+<body class="font-['Nunito'] text-gray-800 bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-2">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <a href="{{ url_for('home') }}" class="text-xl font-bold text-green-600">Islamable</a>
+      </div>
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="{{ url_for('index') }}" class="font-semibold hover:text-green-500 relative after:absolute after:w-0 after:h-0.5 after:bg-green-500 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">Quran</a>
+        <a href="{{ url_for('get_duas') }}" class="font-semibold hover:text-green-500 relative after:absolute after:w-0 after:h-0.5 after:bg-green-500 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">Dua Book</a>
+        <a href="{{ url_for('prayer') }}" class="font-semibold hover:text-green-500 relative after:absolute after:w-0 after:h-0.5 after:bg-green-500 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">Prayer Checker</a>
+        <a href="{{ url_for('map_page') }}" class="font-semibold hover:text-green-500 relative after:absolute after:w-0 after:h-0.5 after:bg-green-500 after:bottom-0 after:left-0 hover:after:w-full after:transition-all">Halal finder</a>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="hamburger" class="text-gray-700 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4 md:hidden px-6 transition-all duration-300 ease-in-out">
+      <a href="{{ url_for('index') }}" class="text-green-600 font-semibold hover:text-green-500">Quran</a>
+      <a href="{{ url_for('get_duas') }}" class="text-green-600 font-semibold hover:text-green-500">Dua Book</a>
+      <a href="{{ url_for('prayer') }}" class="text-green-600 font-semibold hover:text-green-500">Prayer Checker</a>
+      <a href="{{ url_for('map_page') }}" class="text-green-600 font-semibold hover:text-green-500">Halal finder</a>
+    </div>
+  </nav>
+
+  <!-- Intro Section -->
+  <section id="food-section" class="py-20 px-5 bg-gradient-to-b from-green-300 to-green-500 text-white text-center flex flex-col items-center justify-center h-screen">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-5xl font-bold mb-4 text-shadow shadow-black/20">Find Halal Eats</h1>
+      <p class="text-xl mb-8 leading-relaxed">
+        Easily locate halal restaurants near you with our interactive Halal Finder. Whether you're craving a quick bite or planning a meal out, simply enter your postcode or enable location access to explore nearby halal options. Your next delicious and worry-free meal is just a tap away!
+      </p>
+      <button id="scroll-button" class="bg-white text-green-500 hover:bg-green-500 hover:text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all hover:-translate-y-1">Locate</button>
+    </div>
+  </section>
+
+  <!-- Halal Checker Section -->
+  <section id="halal-checker-section" class="py-16 px-5 text-center">
+    <h1 class="text-4xl font-bold text-green-500 mb-4">Halal Food Finder</h1>
+    <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8">Enter your postcode or use your current location to find nearby halal food shops and restaurants.</p>
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <input type="text" id="postcode-input" class="flex-1 max-w-md p-3 border border-gray-300 rounded-lg text-base" placeholder="Enter postcode here">
+      <button id="search-button" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Search</button>
+      <button id="location-button" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">Use My Location</button>
+    </div>
+    <div id="map-container" class="w-full max-w-5xl h-[500px] mx-auto rounded-xl overflow-hidden shadow-lg">
+      <div id="map" class="w-full h-full"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="mb-6 md:mb-0">
+          <h2 class="text-2xl font-bold text-green-400 mb-4">Islamable</h2>
+          <p class="text-gray-400">Your daily Muslim companion</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Features</h3>
+            <ul class="space-y-2">
+              <li><a href="{{ url_for('prayer') }}" class="text-gray-400 hover:text-white transition duration-300">Prayer Times</a></li>
+              <li><a href="{{ url_for('map_page') }}" class="text-gray-400 hover:text-white transition duration-300">Halal Finder</a></li>
+              <li><a href="{{ url_for('get_duas') }}" class="text-gray-400 hover:text-white transition duration-300">Duas Collection</a></li>
+              <li><a href="{{ url_for('index') }}" class="text-gray-400 hover:text-white transition duration-300">Quran Discovery</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Islamable. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Smooth scroll for Locate button -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('scroll-button')?.addEventListener('click', function () {
+        document.getElementById('halal-checker-section')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

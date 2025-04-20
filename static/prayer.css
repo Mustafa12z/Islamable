@@ -1,0 +1,376 @@
+/* Prayer Page Styles */
+:root {
+  --primary-color: #64c647;
+  --primary-hover-color: #4a9935;
+  --background-gradient: linear-gradient(180deg, #b0ec7e, #64c647); /* Light green gradient */
+  --background-gradient-dark: linear-gradient(180deg, #6fa14a, #3b6625); /* Darker green gradient */
+  --card-background: #ffffff;
+  --card-background-dark: #1f2937;
+  --text-color: #333;
+  --text-color-dark: #f4f4f4;
+  --heading-font: 'Nunito', sans-serif;
+  --body-font: 'Nunito', sans-serif;
+  --border-radius: 10px;
+  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --max-container-width: 90%;
+  --max-container-height: 90%;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-hover-color);
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Intro Section Styles */
+.prayer-section {
+  padding: 5rem 5%;
+  background: var(--background-gradient);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.btn {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Feature Section Styles */
+.feature-section {
+  padding: 4rem 5%;
+  text-align: center;
+}
+
+.feature-section h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.feature-section p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 400px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.search-button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+/* Prayer Times Container Styles */
+.prayer-times-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.prayer-times-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.prayer-times-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.prayer-times-header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.prayer-times-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background-color: #eee;
+}
+
+.prayer-time-card {
+  background-color: white;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.prayer-time-card:hover {
+  transform: translateY(-5px);
+}
+
+.prayer-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.prayer-time {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.next-prayer {
+  background-color: #f0f9f0;
+  border-left: 4px solid var(--primary-color);
+}
+
+.prayer-times-footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Weekly View Styles */
+.weekly-view {
+  margin-top: 3rem;
+}
+
+.weekly-view h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.weekly-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.weekly-table th,
+.weekly-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.weekly-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.weekly-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.weekly-table tr:hover {
+  background-color: #f0f9f0;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .navbar-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .intro-title {
+    font-size: 2.5rem;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .search-input {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .weekly-table {
+    font-size: 0.9rem;
+  }
+  
+  .weekly-table th,
+  .weekly-table td {
+    padding: 0.8rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .intro-title {
+    font-size: 2rem;
+  }
+  
+  .prayer-times-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .weekly-table {
+    font-size: 0.8rem;
+  }
+}

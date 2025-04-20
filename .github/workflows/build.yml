@@ -1,0 +1,70 @@
+name: Build and Scan Docker Image
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_and_push:
+        description: "Do you want to build and push your Docker image?"
+        required: true
+        default: "yes"
+        type: choice
+        options:
+          - yes
+          - no
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_and_push == 'yes' }}
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Log in to Amazon ECR
+        run: |
+          aws ecr get-login-password --region ${{ vars.AWS_REGION }} | \
+          docker login --username AWS --password-stdin ${{ env.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com
+
+      - name: Create .env file for python-dotenv
+        run: |
+          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
+          echo "FLASK_SECRET=${{ secrets.FLASK_SECRET }}" >> .env
+          # Add more secrets if needed
+
+      - name: Build Docker image
+        run: |
+          ECR_URI=${{ env.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com/islamable:latest
+          echo "ECR_URI=$ECR_URI" >> $GITHUB_ENV
+          docker build -t $ECR_URI .
+
+      - name: Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.ECR_URI }}
+          format: table
+          severity: CRITICAL,HIGH
+          exit-code: 1
+
+      - name: Push image to ECR
+        run: |
+          docker push $ECR_URI
+
+  skip:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.build_and_push == 'no' }}
+    steps:
+      - name: Skip build
+        run: echo "Skipping Docker build and push as selected."
