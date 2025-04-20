@@ -38,3 +38,7 @@ override.tf.json
 terraform.rc
 
 venv
+
+mytoken.txt
+
+runner.sh
