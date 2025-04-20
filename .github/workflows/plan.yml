@@ -6,7 +6,7 @@ on:
       run_plan:
         description: "Do you want to run terraform plan?"
         required: true
-        default: "yes"
+        default: "no"
         type: choice
         options:
           - 'yes'
