@@ -61,9 +61,6 @@ jobs:
 
       - name: Force ECS redeploy
         run: |
-         aws ecs update-service \ 
-         --cluster islamable-cluster 
-         --service islamable-service \
-         --force-new-deployment \
-         --region eu-west-2
+         aws ecs update-service --cluster islamable-cluster --service islamable-service --force-new-deployment --region eu-west-2
+
         
