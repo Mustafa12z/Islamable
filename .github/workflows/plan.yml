@@ -1,0 +1,73 @@
+name: Terraform Plan
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_tfsec:
+        description: "Do you want to run tfsec before plan?"
+        required: true
+        default: "yes"
+        type: choice
+        options:
+          - "yes"
+          - "no"
+
+jobs:
+  terraform-plan:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
+
+      - name: Create terraform.tfvars from secrets
+        run: |
+          cat > terraform.tfvars <<EOF
+          public_subnet_name = "${{ secrets.public_subnet_name }}"
+          private_subnet_name = "${{ secrets.private_subnet_name }}"
+          sg_name = "${{ secrets.sg_name }}"
+          igw_name = "${{ secrets.igw_name }}"
+          vpc_name = "${{ secrets.vpc_name }}"
+          route_table_name = "${{ secrets.route_table_name }}"
+          tg_name = "${{ secrets.tg_name }}"
+          load_balancer_type = "${{ secrets.load_balancer_type }}"
+          alb_name = "${{ secrets.alb_name }}"
+          certificate_arn = "${{ secrets.certificate_arn }}"
+          image = "${{ secrets.image }}"
+          container_name = "${{ secrets.container_name }}"
+          ecs_cluster_name = "${{ secrets.ecs_cluster_name }}"
+          capacity_providers = ${ secrets.capacity_providers }
+          root_domain_name = "${{ secrets.root_domain_name }}"
+          EOF
+
+      - name: Install tfsec
+        if: ${{ github.event.inputs.run_tfsec == 'yes' }}
+        run: |
+          curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
+
+      - name: Run tfsec scan
+        if: ${{ github.event.inputs.run_tfsec == 'yes' }}
+        run: |
+          cd infra
+          tfsec .
+
+      - name: Terraform Init
+        run: |
+          cd infra
+          terraform init
+
+      - name: Terraform Plan
+        run: |
+          cd infra
+          terraform plan 
