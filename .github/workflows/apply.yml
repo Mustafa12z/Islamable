@@ -58,3 +58,12 @@ jobs:
         run: |
           cd infra
           terraform apply -auto-approve -var-file=../terraform.tfvars
+
+      - name: Force ECS redeploy
+        run: |
+         aws ecs update-service \ 
+         --cluster islamable-cluster 
+         --service islamable-service \
+         --force-new-deployment \
+         --region eu-west-2
+        
