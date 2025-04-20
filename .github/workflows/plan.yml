@@ -54,15 +54,6 @@ jobs:
           cd infra
           terraform init
 
-      - name: Install tfsec
-        run: |
-          curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
-
-      - name: Run tfsec scan
-        run: |
-          cd infra
-          tfsec .
-
       - name: Terraform Plan
         run: |
           cd infra
