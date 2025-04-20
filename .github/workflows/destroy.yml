@@ -1,10 +1,10 @@
-name: Terraform Apply
+name: Terraform Destroy
 
 on:
   workflow_dispatch:
     inputs:
-      run_apply:
-        description: "Do you want to apply the infrastructure?"
+      run_destroy:
+        description: "Do you want to destroy the infrastructure?"
         required: true
         default: "no"
         type: choice
@@ -13,8 +13,8 @@ on:
           - 'no'
 
 jobs:
-  terraform-apply:
-    if: ${{ github.event.inputs.run_apply == 'yes' }}
+  terraform-destroy:
+    if: ${{ github.event.inputs.run_destroy == 'yes' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -54,7 +54,7 @@ jobs:
           cd infra
           terraform init
 
-      - name: Terraform Apply
+      - name: Terraform Destroy
         run: |
           cd infra
-          terraform apply -auto-approve -var-file=../terraform.tfvars
+          terraform destroy -auto-approve -var-file=../terraform.tfvars
